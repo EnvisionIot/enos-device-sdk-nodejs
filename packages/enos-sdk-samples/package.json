@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "name": "enos-device-sdk-nodejs-samples",
+  "version": "0.4.0",
+  "description": "samples for enos-device-sdk-nodejs",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EnvisionIot/enos-device-sdk-nodejs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@types/debug": "^4.1.5",
+    "babel-node": "^0.0.1-security",
+    "core-js": "^3.4.1",
+    "debug": "^4.1.1",
+    "enos-device-sdk-nodejs-core": "^0.4.0",
+    "enos-mqtt-sdk-nodejs": "^0.4.0",
+    "is-type-of": "^1.2.1",
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist && rm -rf tsconfig.package.tsbuildinfo",
+    "dev": "tsc -b -w ./tsconfig.package.json",
+    "build": "npm run clean && tsc -b -w ./tsconfig.package.json",
+    "prepublish": "npm run build"
+  }
+}

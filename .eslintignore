@@ -1,0 +1,4 @@
+dist/
+lib/
+*.d.ts
+babel.config.js

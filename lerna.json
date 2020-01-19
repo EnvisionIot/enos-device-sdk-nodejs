@@ -1,0 +1,15 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "ignored-file"
+      ]
+    }
+  },
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

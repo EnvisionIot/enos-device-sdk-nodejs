@@ -1,0 +1,50 @@
+{
+  "name": "enos-device-sdk-nodejs",
+  "version": "1.0.0",
+  "description": "enos iot device sdk for nodejs",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "yarn",
+    "clean": "lerna run clean",
+    "dev": "yarn clean && tsc -b -w packages/tsconfig.project.json",
+    "build": "yarn clean && tsc -b packages/tsconfig.project.json",
+    "update:package": "ts-node scripts/update_package_json.ts",
+    "update:tsconfig": "ts-node scripts/update_package_tsconfig.ts",
+    "sample": "DEBUG=* ts-node packages/enos-sdk-samples/src/samples/connection.js",
+    "test": "cross-env TEST_ENV=beta jest"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-typescript": "^7.7.2",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.9",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "babel-eslint": "^10.0.3",
+    "confusing-browser-globals": "^1.0.9",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "17.x",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "jest": "^24.9.0",
+    "lerna": "^3.18.4",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.2"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "is-type-of": "^1.2.1"
+  }
+}

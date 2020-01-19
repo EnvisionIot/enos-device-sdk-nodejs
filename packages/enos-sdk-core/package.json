@@ -1,0 +1,32 @@
+{
+  "name": "enos-device-sdk-nodejs-core",
+  "version": "0.4.0",
+  "description": "core component of enos-device-sdk-nodejs",
+  "main": "index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EnvisionIot/enos-device-sdk-nodejs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "debug": "^4.1.1"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist && rm -rf tsconfig.package.tsbuildinfo",
+    "dev": "tsc -b -w ./tsconfig.package.json",
+    "build": "npm run clean && tsc -b ./tsconfig.package.json",
+    "prepublish": "npm run build"
+  }
+}
